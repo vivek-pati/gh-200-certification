@@ -6,8 +6,10 @@ jobs:
     runs-on: ubuntu_latest
     steps:
       - name: Print greeting
-        run: eco "Hello !!"
+        run: echo "Hello !!"
       - name: Print goodbye
-        run: eco "Byee !!"
+        run: | 
+          echo "Byee !!"
+          echo "New Line"
         
     
