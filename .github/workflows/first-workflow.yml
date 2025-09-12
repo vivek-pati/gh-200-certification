@@ -3,7 +3,7 @@ on: workflow_dispatch
 jobs:
   first-job:
     # Github Provides lot of runners docs.github.com
-    runs-on: ubuntu_latest
+    runs-on: ubuntu-latest
     steps:
       - name: Print greeting
         run: echo "Hello !!"
