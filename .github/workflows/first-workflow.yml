@@ -3,11 +3,13 @@ on: workflow_dispatch
 jobs:
   first-job:
     # Github Provides lot of runners docs.github.com
-    runs-on: ubuntu_latest
+    runs-on: ubuntu-latest
     steps:
       - name: Print greeting
-        run: eco "Hello !!"
+        run: echo "Hello !!"
       - name: Print goodbye
-        run: eco "Byee !!"
+        run: | 
+          echo "Byee !!"
+          echo "New Line"
         
     
