@@ -1,0 +1,19 @@
+name: Reach Project
+# Events : https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#pull_request
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5.0.0
+      - name: Install Node jobs
+        uses: actions/setup-node@v5.0.0
+        with:
+          node-version: '24'
+      - name: Install Dependencies
+        run: npm ci
+      - name: Run test
+        run: |
+          cd react-demo-app
+          npm test
