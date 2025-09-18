@@ -17,7 +17,7 @@ on:
       - feature/*  # feature/new , feature/new/01
       - dev-*
     paths-ignore:
-      - '.github/workflwos/*' 
+      - '.github/workflows/*' 
 
 jobs:
   deploy:
