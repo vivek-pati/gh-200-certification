@@ -1,12 +1,24 @@
 name: Events Demo
 #event filter and activity types
 #events
+# https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#filter-pattern-cheat-sheet
 on: 
   pull_request:
     types:
      - opened
+    branches:
+      - main
+      - feature/*  # feature/new , feature/new/01
+      - dev-*
   workflow_dispatch:
-    
+  push:
+    branches:
+      - main
+      - feature/*  # feature/new , feature/new/01
+      - dev-*
+    paths-ignore:
+      - '.github/workflows/*' 
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
